@@ -4,63 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Cloud Study Jams: Bevy Meetup</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <style>
         body {
-            font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f8f9fa;
             margin: 0;
             padding: 0;
-            color: #333333;
+            color: #333
         }
 
         .container {
             max-width: 700px;
             margin: 30px auto;
-            background-color: #ffffff;
+            background: #fff;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08)
         }
 
-        /* Header */
         .header {
-            background-color: #4285F4;
+            background: #4285F4;
             text-align: center;
+            padding-bottom: 20px
         }
 
         .header img {
             width: 100%;
             max-width: 700px;
-            display: block;
+            display: block
         }
 
         .header-text {
             padding: 30px 20px;
-            color: #ffffff;
+            color: #fff
         }
 
-        .header-text h1 {
+        .header-text h2 {
             margin: 0;
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 600
         }
 
         .header-text p {
             margin-top: 10px;
             font-size: 16px;
             line-height: 1.6;
-            opacity: 0.95;
+            opacity: 0.95
         }
 
-        /* Content */
         .content {
             padding: 35px 40px;
             line-height: 1.7;
-            font-size: 15px;
+            font-size: 15px
         }
 
         .content h2 {
@@ -69,19 +64,13 @@
             font-size: 18px;
             font-weight: 600;
             border-left: 4px solid #4285F4;
-            padding-left: 10px;
+            padding-left: 10px
         }
 
-        .content p {
-            margin: 12px 0;
-            color: #444444;
-        }
-
-        /* Table */
         table {
             border-collapse: collapse;
             width: 100%;
-            margin: 18px 0;
+            margin: 18px 0
         }
 
         th,
@@ -89,129 +78,79 @@
             border: 1px solid #e5e5e5;
             padding: 10px 12px;
             text-align: left;
-            font-size: 14px;
+            font-size: 14px
         }
 
         th {
-            background-color: #f7f7f7;
-            color: #555555;
+            background: #f7f7f7;
+            color: #282828;
             font-weight: 600;
-            width: 30%;
+            width: 30%
         }
 
-        /* Buttons */
         .button {
             display: inline-block;
-            background-color: #4285F4;
-            color: #ffffff !important;
+            background: #4285F4;
+            color: #fff !important;
             text-decoration: none;
             padding: 12px 24px;
             border-radius: 6px;
             margin-top: 14px;
             font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 0.3px;
-            transition: background-color 0.2s ease-in-out;
+            font-size: 14px
         }
 
         .button:hover {
-            background-color: #357ae8;
+            background: #357ae8
         }
 
-        .button i {
-            margin-right: 8px;
-        }
-
-        /* Footer */
         .footer {
-            background-color: #f8f9fa;
+            background: #f8f9fa;
             font-size: 13px;
-            color: #777777;
+            color: #777;
             text-align: center;
             padding: 30px 20px;
             line-height: 1.6;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0
         }
 
         .footer a {
             color: #4285F4;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
+            text-decoration: none
         }
 
         .social-icons {
-            margin-top: 12px;
+            margin-top: 12px
         }
 
-        .social-icons a {
-            display: inline-block;
+        .social-icons img {
             margin: 0 8px;
-            color: #4285F4;
-            font-size: 20px;
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
-
-        .social-icons a:hover {
-            color: #1a73e8;
-        }
-
-        /* Responsive */
-        @media screen and (max-width: 480px) {
-            .content {
-                padding: 25px 20px;
-                font-size: 14px;
-            }
-
-            .header-text h1 {
-                font-size: 22px;
-            }
-
-            .button {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            .social-icons a {
-                font-size: 22px;
-            }
+            width: 22px;
+            vertical-align: middle
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <img src="https://raw.githubusercontent.com/gdg-cmyk/Mails/refs/heads/main/event_data/cloud_study_jams_bevy_meetup_header.png"
-                alt="Google Cloud Study Jams Header">
+            <img src="cid:header" alt="Google Cloud Study Jams Header">
             <div class="header-text">
-                <h2 style="text-align: center;">Congratulations, {name}!</h2>
-                <p>
-                    You’ve been selected from our chapter to participate in
-                    <strong style="color: #89e7ff;">Google Cloud Study Jams</strong> campaign.
-                </p>
+                <h2>Congratulations, $name!</h2>
+                <p>You’ve been selected from our chapter to participate in <strong style="color:#89e7ff;">Google Cloud
+                        Study Jams</strong> campaign.</p>
             </div>
         </div>
-
-        <!-- Content -->
         <div class="content">
-            <h2><i class="fa-solid fa-calendar-check"></i> Bevy Meetup Reminder</h2>
-            <p>
-                We’re excited to connect with you today for our
-                <strong>Google Cloud Study Jams Bevy Meetup (Session 1)</strong> — an
-                interactive session to discuss progress, clarify doubts, and stay aligned with your learning goals.
-            </p>
-
-            <h2><i class="fa-solid fa-circle-info"></i> Event Details</h2>
+            <h2>Bevy Meetup Reminder</h2>
+            <p>We’re excited to connect with you today for our <strong>Google Cloud Study Jams Bevy Meetup (Session
+                    1)</strong> — an interactive session to discuss progress, clarify doubts, and stay aligned with your
+                learning goals.</p>
+            <h2>Event Details</h2>
             <table>
                 <tr>
                     <th>Event</th>
-                    <td>Google Cloud Study Jams - Bevy Meetup (Session 1)</td>
+                    <td>Google Cloud Study Jams – Bevy Meetup (Session 1)</td>
                 </tr>
                 <tr>
                     <th>Date</th>
@@ -230,54 +169,29 @@
                     <td>Discuss progress, clarify doubts, and track Study Jams progress</td>
                 </tr>
             </table>
-
-            <h2><i class="fa-solid fa-video"></i> How to Join</h2>
+            <h2>How to Join</h2>
             <p>Watch this short guide to access and join the Bevy meetup:</p>
-            <a href="https://tinyurl.com/BevyMeetJoiningGuide" class="button">
-                <i class="fa-brands fa-youtube"></i> Watch Guide
-            </a>
-
-            <h2><i class="fa-solid fa-question-circle"></i> Submit Your Questions</h2>
+            <a href="https://tinyurl.com/BevyMeetJoiningGuide" class="button">Watch Guide</a>
+            <h2>Submit Your Questions</h2>
             <p>Have a question to be addressed during the meetup? Submit it in advance:</p>
-            <a href="https://tinyurl.com/BevyMeetupQandA" class="button">
-                <i class="fa-solid fa-paper-plane"></i> Submit Questions
-            </a>
-
-            <p style="margin-top: 25px;">
-                We look forward to seeing you today and making the most of this learning journey!
+            <a href="https://tinyurl.com/BevyMeetupQandA" class="button">Submit Questions</a>
+            <p style="margin-top:25px">We look forward to seeing you today and making the most of this learning journey!
             </p>
         </div>
-
-        <!-- Footer -->
         <div class="footer">
             <p><strong>Google Cloud Study Jams | GDG BMSIT&M</strong></p>
             <p>Connect With Us</p>
-
             <div class="social-icons">
-                <a href="https://instagram.com/gdg_bmsitm" title="Instagram">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" width="22"
-                        alt="Instagram">
-                </a>
-                <a href="https://gdg.community.dev/..." title="Chapter Page">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" width="22"
-                        alt="Chapter Page">
-                </a>
-                <a href="https://linkedin.com/company/gdg-bmsitm" title="LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="22"
-                        alt="LinkedIn">
-                </a>
-                <a href="https://linktr.ee/gdg_bmsit" title="Linktree">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linktree.svg" width="22"
-                        alt="Linktree">
-                </a>
+                <a href="https://www.instagram.com/gdg_bmsitm"><img src="cid:instagram" alt="Instagram"></a>
+                <a
+                    href="https://gdg.community.dev/gdg-on-campus-bms-institute-of-technology-management-bengaluru-india"><img
+                        src="cid:google" alt="Chapter Page"></a>
+                <a href="https://www.linkedin.com/company/gdg-bmsitm"><img src="cid:linkedin" alt="LinkedIn"></a>
+                <a href="https://linktr.ee/gdg_bmsit"><img src="cid:linktree" alt="Linktree"></a>
             </div>
-
-
-            <p style="margin-top: 15px; font-size: 12.5px; color: #999;">
-                © 2025 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043<br>
-                This is an auto-generated email regarding the Google Cloud Study Jams campaign.<br>
-                If you no longer wish to receive these emails, you may unsubscribe.
-            </p>
+            <p style="margin-top:15px;font-size:12.5px;color:#999">© 2025 Google LLC, 1600 Amphitheatre Parkway,
+                Mountain View, CA 94043<br>This is an auto-generated email regarding the Google Cloud Study Jams
+                campaign.<br>If you no longer wish to receive these emails, you may unsubscribe.</p>
         </div>
     </div>
 </body>

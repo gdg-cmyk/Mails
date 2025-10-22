@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from utils import read_csv, read_html_template, connect_smtp, create_message
 from email_config import SUBJECT
 
-# Load env variables
+# Load env
 load_dotenv()
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 APP_PASSWORD = os.getenv("APP_PASSWORD")
@@ -13,18 +13,15 @@ TEMPLATE_FILE = os.getenv("TEMPLATE_FILE")
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 50))
 PAUSE_DURATION = int(os.getenv("PAUSE_DURATION", 60))
 
-# Read participants and template
+# Read CSV and template
 emails, names = read_csv(CSV_FILE)
 html_template = read_html_template(TEMPLATE_FILE)
 
-# Connect to SMTP
+# Connect SMTP
 server = connect_smtp(SENDER_EMAIL, APP_PASSWORD)
 
-# Send emails
 for i, (recipient, name) in enumerate(zip(emails, names), start=1):
-    body = html_template.replace("{name}", name)
-    msg = create_message(SENDER_EMAIL, recipient, SUBJECT, body)
-
+    msg = create_message(SENDER_EMAIL, recipient, SUBJECT, html_template, name)
     try:
         server.send_message(msg)
         print(f"[{i}/{len(emails)}] Email sent to: {recipient}")
