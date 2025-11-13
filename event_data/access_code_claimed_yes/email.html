@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Cloud Study Jams — Progress Report</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Google Sans', 'Inter', Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            color: #222;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ececec;
+            box-shadow: 0 6px 20px rgba(18, 38, 63, 0.08);
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+        }
+
+        .content {
+            padding: 34px 40px;
+            line-height: 1.6;
+            font-size: 15px;
+            color: #222;
+        }
+
+        h2 {
+            color: #0F62FE;
+            margin: 8px 0 16px;
+            font-size: 18px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        .highlight {
+            background: #f4f8ff;
+            border-left: 6px solid #4285F4;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        /* === Table === */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 28px;
+            border: 1px solid #e4e8ef;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 12px 14px;
+            border: 1px solid #e4e8ef;
+        }
+
+        th {
+            background-color: #1a73e8;
+            color: white;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8faff;
+        }
+
+        td {
+            color: #222;
+        }
+
+        td:nth-child(2) {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* === Progress Bar === */
+        .progress-container {
+            width: 100%;
+            margin-top: 12px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* optional for better vertical alignment */
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 14px;
+            background-color: #f4f6fb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6AA2, #F94184);
+            width: 0%;
+            /* dynamically replaced by inline style */
+            border-radius: 10px;
+            transition: width 0.6s ease;
+        }
+
+
+        .important {
+            background: #fff2cc;
+            border-left: 6px solid #ffb703;
+            padding: 12px 14px;
+            margin: 28px 0;
+        }
+
+        .footer {
+            background: #fafbfd;
+            color: #6b7280;
+            font-size: 13px;
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #eef2f6;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            margin: 0 8px;
+            width: 22px;
+            vertical-align: middle;
+        }
+
+        @media (max-width:520px) {
+            .content {
+                padding: 22px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="cid:header" alt="GDG BMSIT&M Header">
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>Hey $name,</h2>
+
+            <div>
+                ⭐ <strong>The finish line is just about a week away!</strong><br><br>
+                Now’s the time to refocus, reignite your energy, and push through with everything you’ve got.
+                Let’s close this chapter with pride and power! 🚀
+                <br><br>
+                Remember — it’s not about how you start, it’s about how you finish.
+                So tighten those laces, fuel that drive, and let’s cross the finish line like champions. 🏁
+            </div>
+
+            <h3 style="color:#0F62FE;">Your Progress Report 📄</h3>
+            <p>Please find below your current progress in the campaign:</p>
+
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Access Code Redemption Status</td>
+                    <td>$redemption_status</td>
+                </tr>
+                <tr>
+                    <td>All Skill Badges &amp; Games Completed</td>
+                    <td>$all_completed</td>
+                </tr>
+                <tr>
+                    <td># of Skill Badges Completed</td>
+                    <td>$skill_badges</td>
+                </tr>
+                <tr>
+                    <td># of Arcade Games Completed</td>
+                    <td>$arcade_games</td>
+                </tr>
+            </table>
+
+            <h3 style="color:#1a73e8;">See the progress for your milestones below!</h3>
+            <p style="margin-top:0; color:#444; font-size:15px;">
+                Track how close you are to completing your learning journey!
+                Each lab you complete fills this bar and takes you one step closer to unlocking your milestone rewards.
+                🚀
+            </p>
+
+            <p style="font-weight:600; color:#202124; margin-top:14px;">
+                Tier #1 – Complete <strong>100 labs</strong> listed in the campaign ⏳
+            </p>
+
+            <!-- Progress Bar (No JavaScript) -->
+            <!-- Progress Bar (Email-Safe) -->
+            <div class="progress-container" style="width:100%; font-family:'Segoe UI', Arial, sans-serif;">
+
+                <!-- Top Labels -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
+                    style="border-collapse:collapse; border:none; margin-bottom:6px; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tr>
+                        <td align="left" style="font-size:14px;font-weight:500;color:#333; border:none;">
+                            <strong>${progress_percent}%</strong> Completed
+                        </td>
+                        <td align="right" style="font-size:14px;font-weight:500;color:#333; border:none;">
+                            <strong>${completed_labs}</strong>/20 Labs
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Progress Bar Background -->
+                <div class="progress-bar-bg"
+                    style="width:100%; height:14px; background-color:#f4f6fb; border-radius:10px; overflow:hidden;">
+                    <div class="progress-bar-fill"
+                        style="height:100%; width:${progress_style}; background:linear-gradient(90deg, #FF6AA2, #F94184); border-radius:10px; transition:width 0.6s ease;">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <p style="margin-top: 24px;">
+                <strong>For any questions or queries, reach out to our support team at
+                    <a style="text-decoration: none; color:#4285F4" href="mailto:gdgocsupport@google.com"
+                        aria-label="Email GDG OC Support at gdgocsupport at google dot com">gdgocsupport@google.com</a>.
+                </strong>
+            </p>
+
+            <div class="important">
+                <strong>⚠️ Please Note:</strong> The deadline is <strong>19th November, 5 PM IST</strong>.
+                It will <em>not</em> be extended, so please finish all your courses on time to ensure eligibility for
+                swags.
+            </div>
+
+            <p>All the best & happy facilitating,
+                <br>
+                <strong>The Google Cloud Study Jams Team</strong>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div><strong>Google Developer Group on Campus — BMSIT&M</strong></div>
+            <p>Connect With Us</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gdg_bmsitm"><img src="cid:instagram" alt="Instagram"></a>
+                <a
+                    href="https://gdg.community.dev/gdg-on-campus-bms-institute-of-technology-management-bengaluru-india"><img
+                        src="cid:google" alt="Chapter Page"></a>
+                <a href="https://www.linkedin.com/company/gdg-bmsitm"><img src="cid:linkedin" alt="LinkedIn"></a>
+                <a href="https://linktr.ee/gdg_bmsit"><img src="cid:linktree" alt="Linktree"></a>
+            </div>
+            <p style="margin-top:15px;font-size:12.5px;color:#999">
+                © 2025 GDG on Campus BMSIT&M. All rights reserved.<br>
+                This is an automated message for the Google Cloud Study Jams campaign.<br>
+                You’re receiving this because you enrolled via GDG BMSIT&M.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

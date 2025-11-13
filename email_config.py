@@ -1,1 +1,1 @@
-SUBJECT = "[Reminder] Join the Google Cloud Study Jams Sync Meeting"
+SUBJECT = "[Reminder] The finish line is just about a week away!"

@@ -2,10 +2,11 @@ import os
 import time
 from dotenv import load_dotenv
 from utils import read_csv, read_html_template, connect_smtp, create_message
-from email_config import SUBJECT
+from email_config import SUBJECT  # keep as-is
 
-# Load env
+# === Load environment variables ===
 load_dotenv()
+
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 APP_PASSWORD = os.getenv("APP_PASSWORD")
 CSV_FILE = os.getenv("CSV_FILE")
@@ -13,24 +14,43 @@ TEMPLATE_FILE = os.getenv("TEMPLATE_FILE")
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 50))
 PAUSE_DURATION = int(os.getenv("PAUSE_DURATION", 60))
 
-# Read CSV and template
-emails, names = read_csv(CSV_FILE)
+# === Validate required environment variables ===
+missing = [var for var in ["SENDER_EMAIL", "APP_PASSWORD", "CSV_FILE", "TEMPLATE_FILE"]
+           if not os.getenv(var)]
+if missing:
+    raise EnvironmentError(f"❌ Missing required environment variables: {', '.join(missing)}")
+
+# === Read input files ===
+participants = read_csv(CSV_FILE)
 html_template = read_html_template(TEMPLATE_FILE)
 
-# Connect SMTP
+# === Connect to Gmail SMTP ===
 server = connect_smtp(SENDER_EMAIL, APP_PASSWORD)
+print(f"📨 Starting to send {len(participants)} progress report emails...\n")
 
-for i, (recipient, name) in enumerate(zip(emails, names), start=1):
-    msg = create_message(SENDER_EMAIL, recipient, SUBJECT, html_template, name)
+# === Email sending loop ===
+for i, participant in enumerate(participants, start=1):
     try:
-        server.send_message(msg)
-        print(f"[{i}/{len(emails)}] Email sent to: {recipient}")
-    except Exception as e:
-        print(f"Failed to send email to {recipient}: {e}")
+        msg = create_message(
+            sender=SENDER_EMAIL,
+            recipient=participant["email"],
+            subject=SUBJECT,
+            html_template=html_template,
+            participant=participant
+        )
 
-    if i % BATCH_SIZE == 0:
-        print(f"Pausing for {PAUSE_DURATION} seconds to avoid Gmail limits...")
+        server.send_message(msg)
+        print(f"[{i}/{len(participants)}] ✅ Sent to: {participant['email']} ({participant['name']})")
+        print(f"   → Progress: {participant['progress']}% ({participant['completed_labs']}/20 labs)\n")
+
+    except Exception as e:
+        print(f"[{i}/{len(participants)}] ❌ Failed to send to {participant['email']}: {e}")
+
+    # Gmail anti-spam rate limiting
+    if i % BATCH_SIZE == 0 and i < len(participants):
+        print(f"\n⏸️ Pausing for {PAUSE_DURATION} seconds to avoid Gmail rate limits...\n")
         time.sleep(PAUSE_DURATION)
 
+# === Wrap up ===
 server.quit()
-print("All emails sent!")
+print("\n🎉 All emails have been processed successfully!")
