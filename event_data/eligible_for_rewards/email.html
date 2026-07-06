@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Cloud Study Jams — Progress Report</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Google Sans', 'Inter', Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            color: #222;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ececec;
+            box-shadow: 0 6px 20px rgba(18, 38, 63, 0.08);
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+        }
+
+        .content {
+            padding: 34px 40px;
+            line-height: 1.6;
+            font-size: 15px;
+            color: #222;
+        }
+
+        h2 {
+            color: #0F62FE;
+            margin: 8px 0 16px;
+            font-size: 18px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        .highlight {
+            background: #f4f8ff;
+            border-left: 6px solid #4285F4;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        /* === Table === */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 28px;
+            border: 1px solid #e4e8ef;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 12px 14px;
+            border: 1px solid #e4e8ef;
+        }
+
+        th {
+            background-color: #1a73e8;
+            color: white;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8faff;
+        }
+
+        td {
+            color: #222;
+        }
+
+        td:nth-child(2) {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* === Progress Bar === */
+        .progress-container {
+            width: 100%;
+            margin-top: 12px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* optional for better vertical alignment */
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 14px;
+            background-color: #f4f6fb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6AA2, #F94184);
+            width: 0%;
+            /* dynamically replaced by inline style */
+            border-radius: 10px;
+            transition: width 0.6s ease;
+        }
+
+
+        .important {
+            background: #fff2cc;
+            border-left: 6px solid #ffb703;
+            padding: 12px 14px;
+            margin: 28px 0;
+        }
+
+        .footer {
+            background: #fafbfd;
+            color: #6b7280;
+            font-size: 13px;
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #eef2f6;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            margin: 0 8px;
+            width: 22px;
+            vertical-align: middle;
+        }
+
+        @media (max-width:520px) {
+            .content {
+                padding: 22px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="cid:header" alt="GDG BMSIT&M Header">
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>Hey $name,</h2>
+
+            <div>
+                <strong>Your hard work has paid off!⚡!</strong><br><br>
+                You’ve shown consistency, effort, and real dedication throughout the Google Cloud Study Jams and we’re
+                excited to let
+                you know that you’re officially eligible for rewards!
+                <br><br>
+                We truly appreciate the time and commitment you put into completing the labs. Your participation helped
+                elevate our
+                campus performance and contributed directly to our Tier-1 achievement. 🚀
+            </div>
+
+            <h3 style="color:#16cb12eb;">✨Surprise!!!</h3>
+            <p>We’ve upgraded the swags for all rank groups!
+                Each rank now has improved rewards based on completion level, and you can check the full details inside
+                the form you’re
+                about to fill.
+                <br><br>
+                Please fill out the T-shirt & reward collection form accurately so we can verify your eligibility and
+                process your
+                goodies smoothly.
+            </p>
+
+            <div
+                style="font-family: Arial, Helvetica, sans-serif; max-width:720px; margin:18px auto; line-height:1.35; color:#222;">
+                <!-- CTA box -->
+                <div
+                    style="border:3px dashed #16cb12eb; background:#eafde8; padding:18px; text-align:center; border-radius:6px; box-sizing:border-box; margin-left: 20%; margin-right: 20%">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGk5fHuyFCFzAnLTqAHH7ZM0sb21fqHoFngmpXDwMnh1xpYA/viewform?usp=sharing&ouid=108092909501067153460"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display:inline-block; text-decoration:none; font-weight:700; color:#1e4db7; font-size:20px; margin-bottom:6px;">
+                        Click Here To Fill The Form
+                    </a>
+                    <div style="font-weight:700; color:#222; margin-top:6px; font-size:16px;">
+                        Deadline: <span style="color:#111;">27th Nov, 5:00 PM IST</span>
+                    </div>
+                </div>
+
+                <!-- Notice -->
+                <div style="margin-top:14px; text-align:center;">
+                    <div style="color:#555; font-size:14px; max-width:720px; margin:0 auto;">
+                        <span
+                            style="font-weight:700; color:#eda91f; font-size:15px; margin-bottom:6px; font-style:italic;">Please
+                            Note:
+                        </span>
+                        <strong>This link is exclusive to your account for claiming the rewards.</strong> If it is
+                        shared or filled out
+                        by anyone
+                        other than the participant who received this email, the rewards will not be processed or
+                        delivered.
+                    </div>
+                </div>
+            </div>
+
+            <p>We’re excited to see how you continue to excel and bring your unique energy to future endeavors.
+                <br><br>
+                Regards,
+                <br> GDG on Campus, BMSIT&M Team
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div><strong>Google Developer Group on Campus — BMSIT&M</strong></div>
+            <p>Connect With Us</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gdg_bmsitm"><img src="cid:instagram" alt="Instagram"></a>
+                <a
+                    href="https://gdg.community.dev/gdg-on-campus-bms-institute-of-technology-management-bengaluru-india"><img
+                        src="cid:google" alt="Chapter Page"></a>
+                <a href="https://www.linkedin.com/company/gdg-bmsitm"><img src="cid:linkedin" alt="LinkedIn"></a>
+                <a href="https://linktr.ee/gdg_bmsit"><img src="cid:linktree" alt="Linktree"></a>
+            </div>
+            <p style="margin-top:15px;font-size:12.5px;color:#999">
+                © 2025 GDG on Campus BMSIT&M. All rights reserved.<br>
+                This is an automated message for the Google Cloud Study Jams campaign.<br>
+                You’re receiving this because you enrolled via GDG BMSIT&M.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

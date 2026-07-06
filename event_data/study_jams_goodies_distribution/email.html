@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Goodies Distribution Ceremony — Google Cloud Study Jams 2025</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Google Sans', 'Inter', Arial, sans-serif;
+            background: #080809;
+            margin: 0;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 36px auto;
+            background: #0f0f12;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #1e1e26;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .header img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Geometric corner accents */
+        .geo {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .content {
+            padding: 40px 44px;
+            line-height: 1.75;
+            font-size: 15px;
+            color: #c8d0dc;
+        }
+
+        .greeting {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 10px;
+            letter-spacing: -0.3px;
+        }
+
+        p {
+            margin: 14px 0;
+            color: #9aa3b0;
+            font-weight: 300;
+        }
+
+        p strong {
+            color: #dde3ec;
+            font-weight: 500;
+        }
+
+        .tier-label-text {
+            font-size: 13px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 6px;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.6px;
+            margin-bottom: 24px;
+        }
+
+        .tier-1 {
+            background: rgba(255, 193, 7, 0.12);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .tier-2 {
+            background: rgba(66, 133, 244, 0.12);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .tier-3 {
+            background: rgba(52, 211, 153, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #1e1e28;
+            margin: 28px 0;
+        }
+
+        .event-card {
+            background: #13131a;
+            border: 1px solid #1e2a3a;
+            border-left: 3px solid #4285F4;
+            border-radius: 10px;
+            padding: 22px 26px;
+            margin: 24px 0;
+            line-height: 2;
+        }
+
+        .event-card .card-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #4285F4;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .event-card .row {
+            display: flex;
+            gap: 12px;
+            font-size: 14.5px;
+            color: #c8d0dc;
+        }
+
+        .event-card .row .label {
+            color: #6b7280;
+            min-width: 60px;
+            font-size: 13px;
+        }
+
+        .info-card {
+            background: #13131a;
+            border: 1px solid #1e2a3a;
+            border-left: 3px solid #34d399;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 14.5px;
+        }
+
+        .info-card .card-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #34d399;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .info-card .size-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 4px 0 8px;
+        }
+
+        .info-card .note {
+            font-size: 12.5px;
+            color: #6b7280;
+            font-weight: 300;
+        }
+
+        .alert-card {
+            background: #13131a;
+            border: 1px solid #2a1e1e;
+            border-left: 3px solid #f87171;
+            border-radius: 10px;
+            padding: 16px 22px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #fca5a5;
+        }
+
+        .alert-card strong {
+            color: #f87171;
+        }
+
+        .voucher-card {
+            background: #13131a;
+            border: 1px solid #2a2a1a;
+            border-left: 3px solid #fbbf24;
+            border-radius: 10px;
+            padding: 16px 22px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #fde68a;
+        }
+
+        .cta-link {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #4285F4 0%, #34d399 100%);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(66, 133, 244, 0.3);
+            letter-spacing: 0.2px;
+        }
+
+        .sign-off {
+            margin-top: 32px;
+            color: #9aa3b0;
+            font-size: 14.5px;
+        }
+
+        .sign-off strong {
+            color: #dde3ec;
+        }
+
+        .footer {
+            background: #0a0a0d;
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 12.5px;
+            color: #4b5563;
+            border-top: 1px solid #1a1a22;
+            line-height: 1.7;
+        }
+
+        .footer strong {
+            color: #6b7280;
+        }
+
+        .footer .social-icons {
+            margin: 12px 0;
+        }
+
+        .footer .social-icons a {
+            display: inline-block;
+            margin: 0 6px;
+        }
+
+        .footer .social-icons img {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+            display: inline-block;
+            filter: invert(1);
+        }
+
+        @media (max-width: 520px) {
+            .content {
+                padding: 24px 22px;
+            }
+
+            .greeting {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <img src="cid:header" alt="GDG BMSIT&M — Goodies Distribution">
+            <!-- Top-right geometric accent -->
+            <svg class="geo" style="top:12px;right:14px;opacity:0.18;" width="48" height="48" viewBox="0 0 48 48"
+                fill="none">
+                <line x1="24" y1="0" x2="24" y2="48" stroke="#4285F4" stroke-width="0.8" />
+                <line x1="0" y1="24" x2="48" y2="24" stroke="#4285F4" stroke-width="0.8" />
+                <rect x="10" y="10" width="28" height="28" stroke="#34d399" stroke-width="0.6" fill="none" />
+            </svg>
+        </div>
+
+        <div class="content">
+
+            <p class="greeting">Hey $name,</p>
+
+            <p>
+                Your hard work and commitment throughout <strong>Google Cloud Study Jams 2025</strong> has paid off.
+                It's time we celebrate that.
+            </p>
+
+            <p>You've earned the title of:</p>
+            <div class="tier-label-text">Achievement Tier</div>
+            <span class="tier-badge $tier_badge_class">$tier_label</span>
+
+            <p>
+                We're thrilled to invite you to the <strong>Goodies Distribution Ceremony</strong> where you'll
+                collect your well-deserved rewards in person.
+            </p>
+
+            <div class="event-card">
+                <div class="card-title">Event Details</div>
+                <div class="row"><span class="label">Venue</span> BSN Auditorium, Lab Block — 2nd Floor</div>
+                <div class="row"><span class="label">Date</span> 8th April 2026</div>
+                <div class="row"><span class="label">Time</span> 12:00 PM onwards</div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="info-card">
+                <div class="card-title">T-Shirt Size on Record</div>
+                <div class="size-value">$tshirt_size</div>
+                <div class="note">
+                    This was captured based on your earlier preference and has been finalised.
+                    Sizes can no longer be changed or exchanged — please plan accordingly.
+                </div>
+            </div>
+
+            <div class="voucher-card">
+                <strong>Reward Details</strong> — Your voucher is attached to this email.
+                Please review it to know exactly what you'll be collecting at the ceremony.
+            </div>
+
+            <div class="alert-card">
+                <strong>Attendance is mandatory.</strong> Goodies will only be distributed in person at the venue.
+                There is no alternate pickup arrangement.
+            </div>
+
+            <p style="margin-top:24px;">
+                Have questions? Reach out on WhatsApp:
+            </p>
+            <a href="https://chat.whatsapp.com/Kasv9YkjkDT7LQ7ZITYRNc" class="cta-link">
+                Join the Help Group
+            </a>
+
+            <div class="sign-off">
+                <p style="margin-top:32px;">See you there.<br><br>
+                    Warm regards,<br>
+                    <strong>GDG on Campus, BMSIT&M</strong>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <!-- Bottom-left geometric accent -->
+            <svg style="position:absolute;bottom:0;left:0;opacity:0.07;" width="60" height="60" viewBox="0 0 60 60"
+                fill="none">
+                <circle cx="0" cy="60" r="40" stroke="#4285F4" stroke-width="0.8" fill="none" />
+                <circle cx="0" cy="60" r="20" stroke="#34d399" stroke-width="0.6" fill="none" />
+            </svg>
+            <strong>Google Developer Group on Campus — BMSIT&M</strong>
+            <p>Connect With Us</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gdg_bmsitm">
+                    <img src="cid:instagram" alt="Instagram">
+                </a>
+                <a
+                    href="https://gdg.community.dev/gdg-on-campus-bms-institute-of-technology-management-bengaluru-india">
+                    <img src="cid:google" alt="Chapter Page">
+                </a>
+                <a href="https://www.linkedin.com/company/gdg-bmsitm">
+                    <img src="cid:linkedin" alt="LinkedIn">
+                </a>
+                <a href="https://linktr.ee/gdg_bmsit">
+                    <img src="cid:linktree" alt="Linktree">
+                </a>
+            </div>
+            <p style="margin-top:14px; font-size:12px; color:#374151;">
+                &copy; 2026 GDG on Campus BMSIT&M. All rights reserved.<br>
+                This is an automated message for the Google Cloud Study Jams campaign.<br>
+                You're receiving this because you participated via GDG BMSIT&M.
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
